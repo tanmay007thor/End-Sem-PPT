@@ -1,0 +1,79 @@
+
+\begin{frame}{Future Plan: Enhancing Model Explainability}
+
+    \textbf{Moving Towards Explainable AI for Sleep Staging}
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item \textbf{Why Explainability?}  
+              - Medical experts need transparency in AI decisions for trust and adoption.  
+              - Understanding how features influence sleep stage transitions is crucial.
+              
+        \item \textbf{Current Achievements:}  
+              - \textcolor{blue}{\textbf{GCN:}} Captures spatial relationships between EEG channels.  
+              - \textcolor{blue}{\textbf{Transformer:}} Captures temporal dependencies in sleep data.  
+              - Achieved state-of-the-art accuracy using both approaches.
+              
+        \item \textbf{Next Steps:}  
+              - Implement AI-driven methods to highlight critical sleep stage transition points.  
+              - Develop feature attribution methods to understand the importance of each signal.  
+              - Improve model interpretability to align with clinical expectations.
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Future Plan: AI for Sleep Science and Clinical Use}
+
+    \begin{columns}
+        % Left Column: Explanation
+        \column{0.55\textwidth}
+        
+        \textbf{Bridging AI and Healthcare}
+        \begin{itemize}
+            \item \textbf{Feature Importance:} Identify which EEG channels contribute most to predictions.
+            \item \textbf{Clinical Relevance:} Provide insights that can be validated by sleep specialists.
+            \item \textbf{Graph + Transformer Insights:}
+            \begin{itemize}
+                \item \textcolor{blue}{\textbf{GCN:}} Capturing inter-channel spatial dependencies.
+                \item \textcolor{blue}{\textbf{Transformer:}} Learning sequential patterns across sleep cycles.
+            \end{itemize}
+
+                    \end{itemize}
+
+        % Right Column: Block Diagram
+       % Right Column: Block Diagram
+\column{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+    % Nodes
+    \node[draw, text width=3cm, align=center, fill=blue!20, rounded corners] 
+        (gcn) {\footnotesize Graph Convolution (GCN) \\ \tiny Captures Spatial Relations};
+        
+    \node[draw, text width=3cm, align=center, fill=blue!40, rounded corners, below=0.6cm of gcn] 
+        (transformer) {\footnotesize Transformer \\ \tiny Captures Temporal Patterns};
+        
+    \node[draw, text width=3cm, align=center, fill=purple!40, rounded corners, below=0.6cm of transformer] 
+        (explainable) {\footnotesize Explainable AI \\ \tiny Sleep Stages \& Feature Analysis};
+        
+    \node[draw, text width=3cm, align=center, fill=green!40, rounded corners, below=0.6cm of explainable] 
+        (medical) {\footnotesize Medical Integration \\ \tiny AI-Assisted Diagnosis};
+
+    % Arrows
+    \draw[->, thick] (gcn) -- (transformer);
+    \draw[->, thick] (transformer) -- (explainable);
+    \draw[->, thick] (explainable) -- (medical);
+\end{tikzpicture}
+
+    \end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Conclusion}
+    \begin{block}{}
+    \justifying
+    Our proposed SleepGCN-Transformer model achieves \textbf{93.12\% training accuracy} and \textbf{93.04\% validation accuracy}, demonstrating its effectiveness in sleep stage classification. The integration of \textbf{Graph Convolution Networks (GCN)} captures spatial dependencies across EEG, EOG, and EMG channels, while the \textbf{Transformer} extracts temporal patterns. The use of \textbf{Focal Loss} enhances class balancing, improving performance on underrepresented sleep stages. Feature importance analysis highlights \textbf{EMG and EEG Pz-Oz} as key predictors. This robust approach lays the foundation for future work in \textbf{Explainable AI}, enabling medical professionals to interpret AI-driven sleep diagnostics effectively.
+    \end{block}
+\end{frame}
