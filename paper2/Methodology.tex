@@ -52,41 +52,7 @@
 \end{frame}
 
 
-
-\begin{frame}{Methodology: Label Mapping and Cleaning}
-	
-	\small
-	\textbf{Label Mapping Scheme:} \\[5pt]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\textbf{Original Label} & \textbf{Mapped Label} & \textbf{Meaning} \\
-		\hline
-		1 & N1 & Light Sleep \\
-		\hline
-		2 & N2 & Intermediate Sleep \\
-		\hline
-		3, 4 & N3 & Deep Sleep \\
-		\hline
-		W & Wake & Awake \\
-		\hline
-		R & REM & Rapid Eye Movement \\
-		\hline
-		e & Removed & Unused class \\
-		\hline
-	\end{tabular} \\[8pt]
-	
-	
-	
-	
-	\begin{itemize}
-		\item Removed invalid entries (e.g., label 'e') using masking.
-		\item Encoded valid labels into integers with \texttt{LabelEncoder}.
-	\end{itemize}
-	
-	
-	
-\end{frame}
+ 
  
  
 
