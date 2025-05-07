@@ -1,0 +1,170 @@
+\begin{frame}{Machine Learning Results Summary}
+	\begin{columns}[t]
+		\column{0.4\textwidth}
+		\begin{block}{\centering \textbf{Random Forest}}
+			\textbf{Accuracy:} 0.764\\
+			\textbf{Precision:} 0.777\\
+			\textbf{Sensitivity:} 0.770\\
+			\textbf{F1-Score:} 0.766
+		\end{block}
+		
+		\vspace{1em}
+		
+		\begin{block}{\centering \textbf{Bagging Classifier}}
+			\textbf{Accuracy:} 0.702\\
+			\textbf{Precision:} 0.687\\
+			\textbf{Sensitivity:} 0.689\\
+			\textbf{F1-Score:} 0.687
+		\end{block}
+		
+		\column{0.4\textwidth}
+		\begin{block}{\centering \textbf{Ensemble Learning}}
+			\textbf{Accuracy:} 0.831\\
+			\textbf{Precision:} 0.830\\
+			\textbf{Sensitivity:} 0.820\\
+			\textbf{F1-Score:} 0.819
+		\end{block}
+		
+		\vspace{1em}
+		
+		\begin{block}{\centering \textbf{Gradient Boosting}}
+			\textbf{Accuracy:} 0.753\\
+			\textbf{Precision:} 0.737\\
+			\textbf{Sensitivity:} 0.746\\
+			\textbf{F1-Score:} 0.734
+		\end{block}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Machine Learning Accuracy Results}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{images/paper_1/bar_chart}
+		
+		\vspace{0.5em}
+		\small\textit{Accuracy, Precision, Recall, F1 Score Comparison}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Detailed Accuracy Comparison}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{images/paper_1/accuracy_comparison}
+		
+		\vspace{0.5em}
+
+
+	\end{center}
+	
+	\vspace{1em}
+	\begin{block}{Classifier Accuracy Scores}
+		\small \textbf{Random Forest:} 0.764 \quad \textbf{Bagging:} 0.702 \quad \textbf{Ensemble:} 0.831 \quad \textbf{Gradient Boosting:} 0.753
+	\end{block}
+		
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}{Results: K-fold Random Forest}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"images/paper_1/Random Forest 1.1"}
+		
+		\column{0.5\textwidth}
+		\scriptsize
+		\textbf{Average Accuracy:} 0.88
+		
+		\vspace{0.3em}
+		\textbf{Class-wise F1-Scores:} \\
+		\textbf{Wake:} 90.43\% \\
+		\textbf{N1:} 57.36\% \\
+		\textbf{N2:} 91.36\% \\
+		\textbf{N3:} 85.53\% \\
+		\textbf{REM:} 87.11\% 
+		
+		\vspace{0.3em}
+		\textbf{Macro Avg:} Precision 85\%, Recall 81\%, F1 82\% \\
+		\textbf{Weighted Avg:} Precision 87\%, Recall 88\%, F1 87\%
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Results: K-fold Ensemble Learning}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"images/paper_1/Ensemble Learning_percentage_based"}
+		
+		\column{0.5\textwidth}
+		\scriptsize
+		\textbf{Average Accuracy:} 0.95
+		
+		\vspace{0.3em}
+		\textbf{Class-wise F1-Scores:} \\
+		\textbf{Wake:} 99\% \\
+		\textbf{N1:} 48\% \\
+		\textbf{N2:} 91\% \\
+		\textbf{N3:} 84\% \\
+		\textbf{REM:} 86\%
+		
+		\vspace{0.3em}
+		\textbf{Macro Avg:} Precision 86\%, Recall 79\%, F1 82\% \\
+		\textbf{Weighted Avg:} Precision 95\%, Recall 95\%, F1 95\%
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Results: K-fold Gradient Boosting}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"images/paper_1/GB 1.1"}
+		
+		\column{0.5\textwidth}
+		\scriptsize
+		\textbf{Average Accuracy:} 0.87
+		
+		\vspace{0.3em}
+		\textbf{Class-wise F1-Scores:} \\
+		\textbf{Wake:} 90.75\% \\
+		\textbf{N1:} 55.24\% \\
+		\textbf{N2:} 91.93\% \\
+		\textbf{N3:} 86.14\% \\
+		\textbf{REM:} 86.25\%
+		
+		\vspace{0.3em}
+		\textbf{Macro Avg:} Precision 83\%, Recall 81\%, F1 82\% \\
+		\textbf{Weighted Avg:} Precision 87\%, Recall 87\%, F1 87\%
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Results: K-fold SGD Classifier}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/paper_1/SGD_percentage_based}
+		
+		\column{0.5\textwidth}
+		\scriptsize
+		\textbf{Average Accuracy:} 0.80
+		
+		\vspace{0.3em}
+		\textbf{Class-wise F1-Scores:} \\
+		\textbf{Wake:} 80.42\% \\
+		\textbf{N1:} 29.04\% \\
+		\textbf{N2:} 88.19\% \\
+		\textbf{N3:} 81.67\% \\
+		\textbf{REM:} 72.83\%
+		
+		\vspace{0.3em}
+		\textbf{Macro Avg:} Precision 73\%, Recall 70\%, F1 70\% \\
+		\textbf{Weighted Avg:} Precision 78\%, Recall 80\%, F1 79\%
+	\end{columns}
+\end{frame}
